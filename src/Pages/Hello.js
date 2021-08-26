@@ -12,6 +12,7 @@ const Hello = () => {
     setName(name)
     setIsSubmitted(true)
   }
+
   return ( 
     <div className="container">
       {isSubmitted ? <Greeting name={name} /> : <NameInput handleSetSubmitted={handleSetSubmitted}/>}

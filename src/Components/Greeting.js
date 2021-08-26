@@ -1,6 +1,7 @@
 import './Greeting.css'
 import moment from 'moment'
 import { useEffect, useState } from 'react'
+import RandomCatGif from './RandomCatGif'
 
 const Greeting = (props) => {
 
@@ -38,8 +39,9 @@ const Greeting = (props) => {
 
   return ( 
     <>
-    <h1>Hello to you too, {name}.</h1>
-    <h2>Hope you're having a wonderful {weekday} {timeOfDay}.</h2>
+    <h1>Hello to you too, <span id="greetedName">{name}</span>.</h1>
+    <h2>Hope you're having a wonderful <span id="weekdayAndTime">{weekday} {timeOfDay}</span>.</h2>
+    <RandomCatGif />
     </>
    )
 }
