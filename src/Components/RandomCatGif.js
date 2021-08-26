@@ -1,13 +1,12 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import './RandomCatGif.css'
+
 const RandomCatGif = () => {
 
   return ( 
-    <>
-    <p>Here's a random cat</p>
-    <img src="https://cataas.com/cat/gif" alt="Cat" />
-    
-    </>
+    <div className="gifWrapper">
+      <img src="https://cataas.com/cat/gif" alt="Cat" />
+      <p>A random cat GIF</p>
+    </div>
    )
 }
  
