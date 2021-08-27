@@ -30,12 +30,22 @@ input {
 }
 
 #submitBtn {
+  width: 4rem;
   background-color: #CAD2C5;
+  color: #354F52;
   border-radius: 0.5rem;
   border: 2px solid #354F52;
   transition: ease-in-out 0.3s;
 }
+
 #submitBtn:hover {
   background-color: #354F52;
   color: #CAD2C5;
+  cursor: pointer;
+}
+
+#submitBtn:disabled {
+  background-color: #CAD2C5;
+  color: grey;
+  cursor: not-allowed;
 }
