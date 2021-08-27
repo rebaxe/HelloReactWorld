@@ -1,14 +1,12 @@
 import './Greeting.css'
 import moment from 'moment'
 import { useEffect, useState } from 'react'
-import RandomCatGif from './RandomCatGif'
+import RandomCatGif from '../RandomCatGif/RandomCatGif'
 
 const Greeting = (props) => {
-
   const { name } = props
   const [weekday, setWeekday] = useState(null)
   const [timeOfDay, setTimeOfDay] = useState(null)
-
 
   useEffect(() => {
     const today = moment()
@@ -16,11 +14,13 @@ const Greeting = (props) => {
     getTimeOfDay(today)
   }, [])
 
+  // Get todays weekday.
   const getWeekDay = (today) => {
     const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     setWeekday(weekdays[today.day()])
   }
 
+  // Get the current time of day.
   const getTimeOfDay = (today) => {
     const hours = today.hours()
     const dayTimes = ['morning', 'afternoon', 'evening', 'night']
@@ -34,7 +34,6 @@ const Greeting = (props) => {
     } else {
       setTimeOfDay(dayTimes[3])
     }
-
   }
 
   return ( 

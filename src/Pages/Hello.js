@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Greeting from '../Components/Greeting'
-import NameInput from '../Components/NameInput'
+import Greeting from '../Components/Greeting/Greeting'
+import NameInput from '../Components/NameInput/NameInput'
 import './Hello.css'
 
 const Hello = () => {

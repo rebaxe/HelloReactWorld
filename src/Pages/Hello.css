@@ -7,3 +7,17 @@
   align-items: center;
   color: #CAD2C5;
 }
+
+#hello {
+  animation: bounce 1000ms infinite alternate;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1.5rem);
+  }
+}
