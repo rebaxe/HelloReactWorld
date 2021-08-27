@@ -5,7 +5,7 @@ const NameInput = (props) => {
 
   const { handleSetSubmitted } = props
 
-  const [name, setName] = useState('')
+  const [name, setName] = useState(null)
 
   const handleInput = (e) => {
     setName(e.target.value)
@@ -13,7 +13,7 @@ const NameInput = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    handleSetSubmitted(name)
+    handleSetSubmitted(name.trim())
   }
 
   return ( 
@@ -23,7 +23,7 @@ const NameInput = (props) => {
         <h2>My name is </h2>
         <form autoComplete="off" onSubmit={(e) => {handleSubmit(e)}}>
           <input type="text" name="name" id="name" value={name} onChange={(e) => {handleInput(e)}}/>
-          <input type="submit" value="OK" id="submitBtn"/>
+          <input type="submit" value="OK" id="submitBtn" disabled={ !name.trim() }/>
         </form>
       </div>
     </>
